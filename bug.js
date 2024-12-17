@@ -1,0 +1,3 @@
+In React Native, when working with FlatList, using the `keyExtractor` prop incorrectly can lead to unexpected behavior.  If the `keyExtractor` function doesn't return a unique key for each item, you might encounter issues such as incorrect rendering, items not updating correctly, or performance problems.
+
+For example, if you use the index as the key (`keyExtractor={(item, index) => index}`), and you modify the array in a way that changes the order of items, FlatList might not update correctly, as the keys won't match the data any more.  This is especially problematic if you're adding or removing items.
